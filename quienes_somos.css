@@ -1,0 +1,70 @@
+body {
+    background-image: url(fondoPantallaInicio.jpeg);
+}
+
+header {
+    list-style: none;
+    padding: 0;
+    width: 90%;
+    background-color: rgba(92, 90, 87, 0.671);
+    /* Color de fondo del encabezado */
+    color: white;
+    margin: auto;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+
+header li {
+    display: inline-block;
+}
+
+header li a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 20px;
+    display: block;
+}
+
+header a:hover {
+    background-color: aliceblue;
+    color: rgb(14, 14, 13);
+    /* Color de texto al pasar el mouse por encima */
+}
+
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    /* Inicialmente, oculta el menú */
+    position: absolute;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+.elemento-izquierda{
+    float: left;
+}
+.elemento-derecha{
+    float: right;
+}
+
+.menu:hover ul {
+    display: block;
+    /* Muestra el menú al pasar el mouse por encima */
+}
+
+.menu li {
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.menu li:hover {
+    background-color: #ddd;
+    /* Cambia el fondo al pasar el mouse por encima de los elementos del menú */
+}

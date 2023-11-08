@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="Imagenes/logoFinal.png">
+</head>
+<body>
+    <div id="custom-alert" class="custom-alert hidden">
+        <p id="alert-message"></p>
+        <button id="close-alert" onclick="ocultarAlert()">Cerrar</button>
+    </div>
+    
+    <header>
+        <div class="menu">
+            <a href="principal.html">Volver</a>
+        </div>
+    </header>
+    <div class="formulario-login">
+        <div class="formulario-contenido">
+            <h2>Iniciar Sesión</h2>
+            <div class="inpGroup">
+                <input type="text" class="inp" id="usuario" name="usuario" required>
+                <label for="usuario" class="inp-label">Usuario</label>                
+            </div>
+            <div class="inpGroup">
+                <input type="password" class="inp" id="contrasena" name="contrasena" required>
+                <label for="contrasena" class="inp-label">Contraseña</label>                
+            </div>
+            <button onclick="iniciarSesion()">Iniciar Sesión</button>
+        </div>
+    </div>
+    <script src="loginLogica.js"></script>
+</body>
+
+</html>

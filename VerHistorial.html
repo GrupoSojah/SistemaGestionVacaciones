@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Solicitudes</title>
+  <link rel="stylesheet" type="text/css" href="VerHistorial.css">
+  <link rel="icon" href="Imagenes/logoFinal.png">
+</head>
+<body>
+  <header>
+    <div class="menu">
+      <a class="login-link" href="pantallaInicioGerente.html">Volver</a>
+    </div>
+  </header>
+  <div class="contDelCont">
+    <div class="container">
+      <div class="Contenido-Filtro">
+        <label for="Seleccion">Filtra por: </label>
+        <select name="Filtrado" id="selectFiltrado">
+          <option value="" disabled selected hidden>-- Selecciona una opción --</option>
+          <option value="Aceptada"> Aceptadas</option>
+          <option value="Rechazada"> Rechazadas</option>
+          <option value="Pendiente"> Pendientes</option>
+        </select>
+        <button onclick="mostrarSolicitudesFiltradas()">Filtrar</button>
+      </div>
+      <h1><b>Solicitudes</b></h1>
+      <div id="solicitud-list">
+        <table id="solicitudes-table">
+          <thead>
+            <tr>
+              <th>Número de Solicitud</th>
+              <th>Nombre del Solicitante</th>
+              <th>Estado de Solicitud</th>
+              <th>Fecha de Solicitud</th>
+            </tr>
+          </thead>
+          <tbody id="solicitudes-body">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="VerHistorial.js"></script>
+</body>
+
+</html>

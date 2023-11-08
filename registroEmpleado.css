@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(Imagenes/fondoPantallaInicio.jpeg);
+}
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background-color: #55372e;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    user-select: none;
+}
+.menu {
+    position: relative;  
+}
+
+.menu a {
+    background-image: linear-gradient(to right,  #55372e, #55372e);
+    padding: 5px;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: background-image 0.3s;
+}
+ 
+.menu a:hover {
+    background-image: linear-gradient(to right, #90643e, #624031);
+}
+
+
+.registro-container {
+    margin: 0 auto;
+    margin-top: 5%;
+    background-color:  #c8ab7c;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.671);
+    width: 300px;
+    justify-content: center;
+    transition: padding 0.3s ease;
+}
+
+.registro-container:hover {
+    padding: 2%;
+}
+
+.registro-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.registro-container label {
+    display: block;
+    margin-bottom: 2%;
+    font-weight: bold;
+}
+
+.registro-container input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10%;
+}
+
+.registro-container button {
+    width: 100%;
+    padding: 10px;
+    background-color:#b78f58;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: padding 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.registro-container button:hover {
+    background-image: linear-gradient(to right, #b78f58, #90643e);
+}
+
+#mensaje {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#mensaje.success {
+    color: green;
+}
+
+#mensaje.error {
+    color: red;
+}
+
+.inputGroup {
+    position: relative;
+}
+
+.input_input {
+    color: #666262;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: 2px solid #dad6d6;
+    background-color: transparent;
+    transition: outline-color 0.25s;
+}
+
+.input_input:focus {
+    color: #000;
+    outline-color: #068019;
+    background-color: #dddada;
+}
+
+.input_label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10%, 60%);
+    transform-origin: left;
+    color: #000000;
+    transition: transform 0.2s;
+}
+
+.input_input:focus+.input_label {
+    transform: translate(0, -102%) scale(0.8);
+}
+
+.input_input:valid+.input_label {
+    transform: translate(0, -102%) scale(0.8);
+}
+
+#area {
+    font-size: 16px;
+    background-color: #cfcbcb;
+    width: 40%;
+    border-radius: 5px;
+    margin-bottom: 10%;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#area option:hover {
+    background-color: #ccc;
+}
+
+input[type="date"] {
+    color: transparent;
+}
+
+input[type="date"]::before {
+    color: #000;
+}

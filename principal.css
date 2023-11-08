@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+
+/* Estilos para el encabezado */
+header {
+    position: fixed;
+    background-color: #55372e;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    user-select: none;
+}
+/* Estilos para el menú a la izquierda */
+.menu {
+    position: relative;
+    /* Añade posición relativa para posicionar el menú desplegable */
+}
+
+.menu a {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+/* Estilos para el menú desplegable */
+.submenu {
+    min-width: 120px;
+    display: none;
+    /* Inicialmente, oculta el menú desplegable */
+    position: absolute;
+    top: 100%;
+    /* Coloca el menú debajo del elemento padre */
+    left: 0;
+    background-color: #55372e;
+    padding: 10px;
+    z-index: 1;
+}
+
+.submenu a {
+    white-space: nowrap;
+}
+.submenu a:hover{
+    background-color: #ffffff;
+    color: #333;
+    
+}
+/* Estilos para mostrar el menú desplegable al posicionar el mouse */
+.menu:hover .submenu {
+    display: block;
+}
+
+.login-link:hover{
+    background-image: linear-gradient(to right, #90643e, #55372e);
+
+}
+/* Estilos para el enlace de inicio de sesión a la derecha */
+.login-link {
+    background-image: linear-gradient(to right, #55372e, #55372e);
+    padding: 5px;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: background-image 0.3s;
+}
+
+body {
+    background-image: url(Imagenes/fondoPantallaInicio.jpeg);
+
+}
+.container{
+    padding: 10px;
+}
+.row{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+#row1, #row2, #row3{
+    transition: padding 0.5s ease;
+    user-select: none;
+    cursor: default;
+    
+}
+#row1:hover, #row2:hover, #row3:hover{
+    padding: 7%;
+}
+#row1{
+    border-radius: 30px;
+    padding: 5%;
+    background-color:  #c8ab7cc7;
+    width: 100%;
+}
+#row1 img{
+    border-radius: 30px;
+    padding: 5%;
+    width: 150%;
+    height: 100%;
+
+}
+#row1 h2{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: black;
+}
+#row1 p{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+#row2{
+    align-items: center;
+    border-radius: 30px;
+    padding: 5%;
+    background-color:  #c8ab7cc7;
+    width: 100%;
+}
+#row2 img{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+
+}
+#row2 p{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+#row2 h1{
+    color: black;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+#row3{
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+    padding: 5%;
+    background-color: #c8ab7cc7;
+    width: 100%;
+}
+#row3 h1{
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+#row3 img{
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+
+}
+#row4{
+    align-items: center;
+}
+form{
+    text-align: left;
+}
+
+textarea{
+    width: 50%;
+    height: 150px;
+    border: none;
+    border-radius: 10px;
+    transition: width 0.3s;
+}
+textarea:focus{
+    width: 60%;
+}
+label{
+    color: black;
+    margin-bottom: 10px;
+    
+}
+.bn30 {
+    font-family: 'Poppins', sans-serif;
+    margin-left: 10%;
+    border: 5em;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+    padding: 0.7em 2em;
+    border-radius: 65px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+    -webkit-transition: box-shadow 0.25s;
+    transition: box-shadow 0.25s;
+    color: rgb(7, 7, 7);
+  }
+  
+  .bn30 .text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+  }
+  .bn30:after {
+    content: "";
+    border-radius: 18px;
+    position: absolute;
+    margin: 4px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background: #ffffff;
+  }
+  
+  .bn30:hover {
+    background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+    box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+  }
+  
+  .bn30:hover .text {
+    background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+  }

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Gestion de vacaciones - Streambe</title>
+    <link rel="stylesheet" href="pagina_inicio.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="icon" href="Imagenes/logoFinal.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@3.10.2/dist/fullcalendar.min.css">
+</head>
+
+<body>
+
+    <div id="custom-alert" class="custom-alert hidden">
+        <p id="alert-message"></p>
+        <button id="close-alert" onclick="ocultarAlert()">Cerrar</button>
+    </div>
+    
+    <header>
+        <div class="menu">
+            <a href="#">Menu</a>
+            <div class="submenu">
+                <a href="#section1">Solicitar Vacaciones</a>
+                <a href="#section2">Ver Mis Vacaciones</a>
+                <a href="#section3">Comentarios</a>
+                <a href="principal.html">Cerrar sesion</a>
+            </div>
+        </div>
+        <div class="Username"></div>
+    </header>
+    <div class="container">
+        <section id="section1">
+            <div class="row" id="row1">
+                <div class="col-15">
+                    <h1><b>Solicita tus Vacaciones</b></h1>
+                </div>
+                <br>
+                <br>
+                <div class="col-15"   >
+                    <div id="calendario"></div>
+                    <br>
+                    <div class="contCalend">
+                        <label for="fecha_inicio"><b>Fecha de inicio:</b></label>
+                        <input id="fecha_inicio" placeholder="aaaa/mm/dd" >
+                        <label for="fecha_fin"><b>Fecha de fin:</b></label>
+                        <input id="fecha_fin" placeholder="aaaa/mm/dd">
+                        <button onclick="limpiarSeleccion()">Limpiar Selección</button>
+                        <button onclick='guardarEnBD()'>Enviar Solicitud</button>
+                    </div>
+                    </div>
+            </div>
+        </section>
+        <section id="section2">
+            <div class="row" id="row2">
+                <div class="Contenido-Filtro">
+                    <label for="Seleccion">Filtra por: </label>
+                    <select name="Filtrado" id="selectFiltrado">
+                        <option value="" disabled selected hidden>--Selecciona una opción--</option>
+                        <option value="Aceptada"> Aceptadas</option>
+                        <option value="Rechazada"> Rechazadas</option>
+                        <option value="Pendiente">Pendientes</option>
+                    </select>
+                    <button onclick="mostrarSolicitudesFiltradas()">Filtrar</button>
+                </div>
+                <h1>Mis Vacaciones</h1>
+                <div id="solicitud-list">
+                    <table id="solicitudes-table">
+                        <thead>
+                            <tr>
+                                <th>Número de Solicitud</th>
+                                <th>Solicitante</th>
+                                <th>Estado de la Solicitud</th>
+                                <th>Fecha de la Solicitud</th>
+                            </tr>
+                        </thead>
+                        <tbody id="solicitudes-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section id="section3">
+            <div class="row" id="row3">
+                <div class="col-6">
+                    <div class="row" id="row4">
+                        <div class="col-6">
+                            <img src="imagenes/logoesc.jpg" alt="">
+                        </div>
+                        <div class="col-6">
+                            <img src="imagenes/logostreambe.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 text-center">
+                    <form action="mailto:eabmodel.et37de11@gmail.com" method="post" enctype="text/plain">
+                        <label for="" id="lblComent">Dejanos un comentario</label><br>
+                        <textarea name="" id="" cols="10" rows="30"></textarea>  
+                        <a href="/"><button type="submit" class="bn30">Enviar</button></a>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.10.2/dist/fullcalendar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.10.2/dist/locale-all.js"></script>
+    <script src="gestionVacacionesUsuario.js"></script>
+
+</body>
+
+</html>
+

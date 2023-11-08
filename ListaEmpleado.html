@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  <title>Listado de Empleados</title>
+  <link rel="icon" href="Imagenes/logoFinal.png">
+  <link rel="stylesheet" type="text/css" href="ListaEmpleado.css">
+</head>
+<body>
+  <header>
+    <div class="menu">
+      <a class="login-link" href="pantallaInicioGerente.html">Volver</a>
+    </div>
+  </header>
+  <div class="contDelCont">
+  <div class="container">
+    <div class="Contenido-Filtro">
+      <label for="Seleccion">Filtra por: </label>
+      <select name="Filtrado" id="selectFiltrado">
+        <option value="fechaIngreso"> Antiguedad</option>
+        <option value="Nombre"> Nombre</option>
+        <option value="Apellido"> Apellido</option>
+      </select>
+      <label for="Tipo"> Ordenar: </label>
+      <select name="Order" id="OrderBY"> 
+        <option value="ASC">Ascendente</option>
+        <option value="DESC">Descendente</option>
+      </select>   
+      <button onclick="mostrarEmpleadosFiltrados()" >Filtrar</button>
+    </div>
+    <h1>Empleados</h1>
+    <div id="Empleado-list">
+        <table id="Empleado-table">
+            <thead>
+                <tr>
+                    <th>Nombre del Empleado</th>
+                    <th>Apellido del Empleado</th>
+                    <th>Area de trabajo</th>
+                    <th>Fecha de Ingreso</th>
+                    <th>DNI</th>
+                </tr>
+            </thead>
+            <tbody id="Empleado-body">
+            </tbody>
+        </table>
+    </div>
+  </div>
+  </div>
+  <script src="ListaEmpleado.js"></script>
+</body>
+</html>

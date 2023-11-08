@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+
+body {
+    background-image: url(Imagenes/fondoPantallaInicio.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+}
+
+.formulario-login {
+    margin-top: 10%;
+    width: 20%;
+    height: 30%;
+    padding: 4%;
+    border-radius: 15px;
+    background-color:  #c8ab7c;
+    box-shadow: 0px 0px 10px rgba(189, 218, 136, 0.5);
+    transition: height 0.4s;
+    overflow: hidden;
+}
+
+.formulario-contenido {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.formulario-contenido h2 {
+    text-align: center;
+}
+
+.formulario-login:hover {
+    height: 34%;
+}
+
+button {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    background-color:  #b78f58;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+    box-shadow: 3px 3px 5px 0px #333;
+}
+
+button:hover {
+    background-image: linear-gradient(to right, #b78f58, #90643e);
+}
+
+.inpGroup {
+    position: relative;
+}
+
+.inp {
+    margin-bottom: 15%;
+    width: 70%;
+    border: solid 1.5px black;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #333;
+    transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.inp-label {
+    font-size: 15px;
+    margin-left: 5%;
+    position: absolute;
+    left: 15px;
+    color: black;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.inp:focus,
+input:valid {
+    outline: none;
+    border: 2px solid black;
+}
+
+.inp:focus~label,
+input:valid~label {
+    transform: translateY(-50%) scale(0.8);
+    background-color:  #c8ab7c;
+    padding: 0.2em;
+    color: rgb(0, 0, 0);
+}
+
+/**/
+header {
+    position: fixed;
+    background-color: #55372e;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu {
+    position: relative;
+}
+
+.menu a {
+    background-image: linear-gradient(to right,  #55372e, #55372e);
+    padding: 5px;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: background-image 0.3s;
+}
+
+.menu a:hover {
+    background-image: linear-gradient(to right, #90643e, #624031);
+}
+
+.custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    display: none;
+}
+
+#alert-message {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#close-alert {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+.hidden {
+    display: none;
+}

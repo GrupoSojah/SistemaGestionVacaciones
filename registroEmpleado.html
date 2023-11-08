@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registrar Usuario</title>
+    <link rel="stylesheet" href="registroEmpleado.css">
+    <link rel="icon" href="Imagenes/logoFinal.png">
+</head>
+<body>
+    <header>
+        <div class="menu">
+          <a class="login-link" href="pantallaInicioGerente.html">Volver</a>
+        </div>
+      </header>
+    <div class="registro-container">
+        <h2>Registro de Usuario</h2>
+        <div id="mensaje"></div>
+        <form id="registro-form" method="post" action="/register">
+            <div class="inputGroup">
+                <input type="text" class="input_input" id="nombre" name="nombre" required>
+                <label for="nombre" class="input_label">Nombre:</label>
+            </div>
+            <div class="inputGroup">
+                <input type="text" class="input_input" id="apellido" name="apellido" required>
+                <label for="apellido" class="input_label">Apellido:</label>
+            </div>
+            <label for="area">Area de trabajo:</label>
+            <select name="area" id="area">
+                <option value="Gerente">Gerente</option>
+                <option value="Produccion">Produccion</option>
+                <option value="RRHH">RRHH</option>
+                <option value="Testing">Testing</option>
+                <option value="Marketing">Marketing</option>
+            </select>
+            <div class="inputGroup">
+                <input type="text" class="input_input" id="dni" name="dni" required>
+                <label for="dni" class="input_label">DNI:</label>
+            </div>
+            <div class="inputGroup">
+                <input type="date" class="input_input" id="fechaDeIngreso" name="fechaDeIngreso" required>
+                <label for="fechaDeIngreso" class="input_label">Fecha de Ingreso: </label>
+            </div>
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+
+    <script src="registroEmpleados.js"></script>
+
+</body>
+
+</html>
